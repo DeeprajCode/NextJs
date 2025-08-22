@@ -6,10 +6,9 @@ const page = () => {
                 <h1 className="text-red-500">Welcome to Dashboard!</h1>
             </div>
             <Image
-                src='/hero-mobile.png'
+                src='/hero-desktop.png'
                 width={560}
                 height={620}
-                className='block md:hidden'
                 alt='Screenshots of the dashboard project showing mobile version'
             />
         </>
