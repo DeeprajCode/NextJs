@@ -4,9 +4,8 @@ import InvoiceStatus from '@/app/ui/invoices/status';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import { fetchFilteredInvoices } from '@/app/lib/data';
 
-const InvoicesTable = ({ query, currentPage }) => {
-  const invoices = fetchFilteredInvoices(query, currentPage);
-
+export default async function InvoicesTable({ query, currentPage }) {
+  const invoices = await fetchFilteredInvoices(query, currentPage);
   return (
     <>
       <div className="mt-6 flow-root">
@@ -118,4 +117,3 @@ const InvoicesTable = ({ query, currentPage }) => {
     </>
   );
 }
-export default InvoicesTable;
