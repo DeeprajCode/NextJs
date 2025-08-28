@@ -1,6 +1,5 @@
 'use client';
 
-import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import {
   CheckIcon,
   ClockIcon,
@@ -9,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
-import { updateInvoice, State } from '@/app/lib/action';
+import { updateInvoice } from '@/app/lib/actions';
 import { useActionState } from 'react';
 
 const EditInvoiceForm = ({ invoice, customers }) => {
@@ -18,7 +17,7 @@ const EditInvoiceForm = ({ invoice, customers }) => {
     errors : {},
   };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
-  const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
+  const  formAction = useActionState(updateInvoiceWithId, initialState);
   return (
     <>
       <form action={formAction}>

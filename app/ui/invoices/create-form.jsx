@@ -1,7 +1,6 @@
 'use client';
 
 import { useActionState } from 'react';
-import { CustomerField } from '@/app/lib/definitions';
 import Link from 'next/link';
 import {
   CheckIcon,
@@ -10,13 +9,12 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
-import { initialize } from 'next/dist/server/lib/render-server';
-import { createInvoice, State } from '@/app/lib/action';
+import { createInvoice } from '@/app/lib/actions';
 
 const Form = ({ customers }) => {
   const initialState = {
     message: null,
-    error: {},
+    errors: {},
   };
   const [state, formAction] = useActionState(createInvoice, initialState);
   return (

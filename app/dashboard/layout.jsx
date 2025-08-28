@@ -1,7 +1,7 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
 
 const Layout = ({ children }) => {
-  const experimental_ppr = true;
+  // const experimental_ppr = true;
   return (
     <>
       <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
