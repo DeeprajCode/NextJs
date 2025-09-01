@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 const InvoiceStatus = ({status}) => {
+    console.log("🚀 ~ InvoiceStatus ~ status:", status)
     return (
         <>
             <span className={clsx('inline-flex items-center rounded-full px-2 py-1 text-sm', {

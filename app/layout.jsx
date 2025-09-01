@@ -6,8 +6,12 @@ export const metadata = {
     default : 'Acme Dashboard',
   },
   description: 'The official Next.js Course Dashboard, built with App Router.',
+  icons : {
+    icon : '/images/world.png'
+  },
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
+console.log("🚀 ~ metadata:", metadata)
 
 const RootLayout = ({children}) => {
   return (
